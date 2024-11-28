@@ -20,10 +20,11 @@ model Bingo{
 
 model Users{
    id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  nome String @unique
   wins Int
   coins Float
-  email String
-  pass String
+  email String @unique
+  pass String @unique
   role Usereses
 }
 

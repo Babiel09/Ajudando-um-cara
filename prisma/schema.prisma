@@ -30,8 +30,8 @@ model Users{
 
 model Itens{
   id       String    @id @default(auto()) @map("_id") @db.ObjectId
-  nome String
-  price Float
+  nome String @unique
+  price Float 
 }
 
 
